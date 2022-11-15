@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Data</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <link rel="stylesheet" href="./style_upload.css"> -->
+
+  {% load static %}
+
+</head>
+
+<!-- <style>
+    body {
+      background-image: url('img6Blur.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style> -->
+
+<body>
+
+    <!-- <h2>Guards Tour Modify Color</h2> -->
+
+    <div class = "Upload-Form">
+
+        <div class="title">
+            <h2>Cedric Box</h2>
+        </div>
+        <div class="subtitle"> 
+            <h4>Upload Data</h4>
+        </div>
+        <br>
+        
+        <form action="update_db" method="post">
+
+            <!-- <div class="subtitle"> Modify Color</div> -->
+
+            {% csrf_token %}
+
+            <div class="box"> 
+
+                <label for="Name" class="subtitle subt2">Operator Name: </label>
+
+                <select name="operator_html" id="" required>
+
+                    <option value="Dieudonne">Dieudonne</option>
+                    <option value="Flavien">Flavien</option>
+
+                </select>
+
+            </div>
+            <br>
+
+            <div class="choose_file">
+
+                <div class="button-wrap">
+                
+                    <!-- <label class="button" for="upload">Choose File</label> -->
+
+                    <input id="upload" name="selected_file_html" type="file">
+
+                </div>
+            
+            </div>
+
+            <br>
+
+            <!-- <p>Drag your files here or click in this area.</p> -->
+
+            <input type="submit" value="Upload" class="submit">
+
+            <!-- <button type="submit">Upload</button> -->
+
+        </form>
+        
+        <h5 style="color:Red;">{{message}}</h5>
+      
+    </div>
+
+</body>
+
+</html>

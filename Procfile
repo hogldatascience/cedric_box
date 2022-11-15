@@ -1,0 +1,1 @@
+web gunicorn cedricbox.wsgi:application --log-file -
