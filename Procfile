@@ -1,1 +1,1 @@
-web gunicorn cedricbox.wsgi:application --log-file -
+web gunicorn cedric_box.wsgi:application --log-file -
